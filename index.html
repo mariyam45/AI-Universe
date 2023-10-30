@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>AI-Universe</title>
+  </head>
+  <body class="">
+    <!-- ------header------- -->
+    <header class="text-center my-4">
+      <h2 class="font-bold text-4xl">AI Universe Hub</h2>
+      <button class="btn bg-red-500 border-0 mt-4 font-bold">
+        Sort by Date
+      </button>
+    </header>
+    <!-- =================================== -->
+
+    <!-- cards area  -->
+    <section class="cards-area md:mx-8 md:my-10 mx-auto">
+      <div class="grid grid-col md:grid-cols-3 gap-3" id="cards-area">
+        <!-- ------  -->
+        <!-- <div class="card card-compact w-96 bg-base-100 border">
+          <figure class="px-10 pt-10">
+            <img src="" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <hr />
+            <div class="card-actions justify-end"></div>
+          </div>
+        </div> -->
+        <!-- ---  -->
+      </div>
+      <div class="text-center" id="btn-showall">
+        <button class="btn btn-active bg-red-500 border-0 hidden" id="showAll">
+          Show All
+        </button>
+      </div>
+    </section>
+
+    <div class="text-center my-12 hidden" id="loader">
+      <button class="btn loading text-rose-500 btn-outline border-0">
+        loading...
+      </button>
+    </div>
+
+    <section id="details-modal justify-center">
+      <!-- You can open the modal using ID.showModal() method -->
+
+      <!-- -------  -->
+      <!-- The button to open modal -->
+
+      <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box w-11/12 max-w-5xl">
+          <form method="dialog">
+            <button
+              class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
+              ✕
+            </button>
+          </form>
+          <div id="modal_content ">
+            <div
+              class="hero max-h-fit bg-base-200 w-80 md:w-full mx-auto md:mx-0 align-center"
+            >
+              <div class="hero-content flex-col lg:flex-row">
+                <div
+                  id="card-left"
+                  class="card w-64 md:w-96 bg-base-100 border border-error bg-red-50 mx-auto md:p-6 p-3"
+                ></div>
+
+                <div id="card-right"></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-action">
+            <label
+              for="my_modal_6"
+              class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              >✕</label
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================ -->
+
+    <script src="js/cards.js"></script>
+  </body>
+</html>
